@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ódor Norbert</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+</head>
+<body>
+    <div class="codescript">
+  <ul>
+      <li>def beker():</li>
+      <li>ev = 0</li>
+      <li>while ev < 1:</li>
+      <li>ev = int(input("\tKérek egy évszámot: "))</li>
+      <li>return ev</li>
+      <br>
+      <li>def szamol():</li>
+      <li>print("1.")</li>
+      <li>evb = beker()</li>
+      <li>evszazad = evb//100+1</li>
+      <li>print("\tA(z)",evb,"év a(z) {}. században van".format(evszazad))</li>
+      <br>
+      <li>def pozitiv():</li>
+      <li>evszam = int(input("\tKérek egy évszámot: "))</li>
+      <li>while evszam<0:</li>
+      <li>evszam = int(input("\tKérek egy évszámot: "))</li>
+      <li>return(evszam)</li>
+      <br>
+      <li>def szoko():</li>
+      <li>print("7.")</li>
+      <li>evszam=pozitiv()</li>
+      <li>if (evszam%4==0 and evszam%100!=0) or evszam%400==0:</li>
+      <li>print("\t"+str(evszam),"év szökőév")</li>
+      <li>else:</li>
+      <li>print("\t"+str(evszam),"év nem szökőév")</li>
+      <br>
+      <li>def beker():</li>
+      <li>ev = -1</li>
+      <li>while ev < 1:</li>
+      <li>ev = int(input("\tKérek egy évszámot: "))</li>
+      <li>return ev</li>
+      <li>def szamol():</li>
+      <li>print("13.")</li>
+      <li>evb = beker()</li>
+      <li>list =[]</li>
+      <li>i = 0</li>
+      <br>
+      <li>while i < evb/10:</li>
+      <li>list.append("Majom")</li>
+      <li>list.append("Kakas")</li>
+      <li>list.append("Kutya")</li>
+      <li>list.append("Disznó")</li>
+      <li>list.append("Patkány")</li>
+      <li>list.append("Bivaly")</li>
+      <li>list.append("Tigris")</li>
+      <li>list.append("Tigris")</li>
+      <li>list.append("Sárkány")</li>
+      <li>list.append("Kígyó")</li>
+      <li>list.append("Ló")</li>
+      <li>list.append("Kecske")</li>
+      <li>i += 1</li>
+      <br>
+      <li>print("\t"+str(evb),"kínai asztrológiai jegye:",list[evb],)</li>
+      <li></li>
+      <br>
+      <li>def szokoev():</li>
+      <li>print("47.")</li>
+      <li>print("\tSzökőévek")</li>
+      <li>szam1=pozitiv()</li>
+      <li>szam2=pozitiv()</li>
+      <li>szam3=0</li>
+      <li>if szam2<szam1:</li>
+      <li>szam3=szam1</li>
+      <li>szam1=szam2</li>
+      <li>szam2=szam3</li>
+      <li>print("\t"+str(szam1),"és",szam2,"között:")</li>
+      <li>seged = 1</li>
+      <li>elso=True</li>
+      <li>for i in range(szam1, szam2):</li>
+      <li>if (i%4==0 and i%100!=0) or i%400==0:</li>
+      <li>if elso:</li>
+      <li>print("\t"+str(i),end="")</li>
+      <li>elso=False</li>
+      <li>else:</li>
+      <li>if seged%10==0:</li>
+      <li>print("*"+str(i))</li>
+      <li>elif seged%10==1:</li>
+      <li>print("\t"+str(i), end="")</li>
+      <li>else:</li>
+      <li>print("*"+str(i),end="")</li>
+      <li>seged+=1</li>
+      <br>
+      <li>def beolvas():</li>
+      <li>szoveg = input("\tKérek egy szót: ")</li>
+      <li>szoveg = szoveg.upper()</li>
+      <li>return szoveg</li>
+      <br>
+      <li>def szamol():</li>
+      <li>print("24.")</li>
+      <li>szoveg1 = beolvas()</li>
+      <li>szoveg2 = beolvas()</li>
+      <br>
+      <li>db = 0</li>
+      <li>for i in range(len(szoveg1)):</li>
+      <li>if szoveg1[i] in szoveg2 and not (szoveg1[i] in szoveg1[:i]):</li>
+      <li>db+=1</li>
+      <li>return "{} db megegyező betű van a szavakban.".format(db)</li>
+      <br>
+      <li>def kiirat():</li>
+      <li>sz = szamol()</li>
+      <li>print("\t"+sz)</li>
+      <li>kifajl = open("darab.txt", "w", encoding="utf-8")</li>
+      <li>kifajl.write(sz)</li>
+      <li>kifajl.close()</li>
+      <br>
+      <li>def keres2():</li>
+      <li>print("19.")</li>
+      <li>szo = input("\tKérek egy szót: ")</li>
+      <li>betu = input("\tKérek egy másik szót: ")</li>
+      <li>szo2 = szo.upper()</li>
+      <li>betu2 = betu.upper()</li>
+      <li>dik=len(szo2)</li>
+      <li>dik2=len(betu2)</li>
+      <li>if szo2[dik-1]==betu2[dik2-1]:</li>
+      <li>print("\tEgyezik az utolsó betű!")</li>
+      <li>else:</li>
+      <li>print("\tNem egyezik meg az utolsó betű!")</li>
+      <br>
+      <li>def keres():</li>
+      <li>print("31.")</li>
+      <li>szo = input("\tKérek egy szöveget: ")</li>
+      <li>betu = input("\tKérek egy betűt: ")</li>
+      <br>
+      <li>while len(betu) > 1:</li>
+      <li>betu = input("\tKérek egy betűt: ")</li>
+      <li>szo2 = szo.upper()</li>
+      <li>betu2 = betu.upper()</li>
+      <li>jo = False</li>
+      <li>for i in range(0,len(szo2)):</li>
+      <li>if betu2 == szo2[i]:</li>
+      <li>jo = True</li>
+      <br>
+      <li>kifajl = open("betukeres.txt", "w", encoding="utf-8")</li>
+      <li>if jo == True:</li>
+      <li>print("\t\tA(z)",szo,"szó tartalmazza a(z)",betu,"betűt.", file=kifajl)</li>
+      <li>print("\t\tA(z)",szo,"szó tartalmazza a(z)",betu,"betűt.")</li>
+      <li>else:</li>
+      <li>print("\t\tA(z)",szo,"szó nem tartalmazza a(z)",betu,"betűt.")</li>
+      <li> kifajl.close()</li>
+    </div>
+  </ul>  
+</body>
+</html>

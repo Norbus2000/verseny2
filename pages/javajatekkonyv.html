@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ódor Norbert</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+</head>
+<body>
+    <div class="codescript">
+    <ul>
+        <li>package hazifeladat;</li>
+        <br>
+        <li>import java.io.IOException;</li>
+        <li>import java.util.Random;</li>
+        <br>
+        <li>public class HaziFeladat {</li>
+        <br>
+        <li>public static void main(String[] args) throws IOException {</li>
+        <li>Random rnd = new Random();</li>
+        <li>int ugyesseg = rnd.nextInt(6) + 1, eletero = rnd.nextInt(12) + 13, szerencse = rnd.nextInt(6) + 7;</li>
+        <br>
+        <li>int menet = 1;</li>
+        <li>int oldal1 = 1;</li>
+        <li>int oldal56 = 0;</li>
+        <li>int oldal66 = 0;</li>
+        <li>int oldal137 = 0;</li>
+        <li>int oldal215 = 0;</li>
+        <li>int oldal270 = 0;</li>
+        <li>int oldal293 = 0;</li>
+        <li>int oldal373 = 0;</li>
+        <li>int oldal387 = 0;</li>
+        <br>
+        <li>int valasz1=0;</li>
+        <li>int valasz2=0;</li>
+        <li>int valasz3=0;</li>
+        <li>int valasz4=0;</li>
+        <br>
+        <li>System.out.printf("Kezdés\n" +</li>
+        <li>"Egy versenyre nevezel, aminek a lényege, hogy át kell kelni a halállabirintuson. \n"</li>
+        <li>+ "A labirintusban tárgyakat találhatsz és szörnyekkel kell harcoljál. \n");</li>
+        <li>System.out.println(" ");</li>
+        <li>System.out.printf("Kalandlap\n");</li>
+        <li>System.out.printf("Ügyesség: %d\n", ugyesseg);</li>
+        <li>System.out.printf("Életerő: %d\n", eletero);</li>
+        <li>System.out.printf("Szerencse: %d\n", szerencse);</li>
+        <li>System.out.println(" ");</li>
+        <br>
+        <li>while (menet==1){</li>
+        <li>if (oldal1 == 1){</li>
+        <li>oldal1=0;</li>
+        <li>System.out.printf("1 oldal\n" +</li>
+        <li>"Miután öt percet haladtál lassan az alagútban, egy kőasztalhoz érsz, amely a bal oldali fal mellett áll. \n"</li>
+        <li>+ "Hat doboz van rajta, egyikükre a te neved festették. \n"</li>
+        <li>+ "Ha kiakarod nyitni a dobozt, lapozz a 270-re. Ha inkább tovább haladsz észak felé, lapozz a 66-ra. \n");</li>
+        <li></li>
+        <li>System.out.println("Válasz: ");</li>
+        <li>try {</li>
+        <li>valasz1 = System.in.read()-48;</li>
+        <li>System.out.printf("A megadott oldal szám \n");</li>
+        <li>System.out.println(valasz1);</li>
+        <li>}</li>
+        <li>catch (IOException e){</li>
+        <li>System.out.println("Nem jó oldal szám!");</li>
+        <li>}</li>
+        <li>if (valasz1 == 270){</li>
+        <li>oldal270 = 1;</li>
+        <li>}</li>
+        <li>if (valasz1 == 66){</li>
+        <li>oldal66 = 1;</li>
+        <li>}</li>
+        <li>}</li>
+        <li>if (oldal56 == 1){</li>
+        <li>oldal56=0;</li>
+        <li>System.out.printf("56. oldal\n" +</li>
+        <li>"Látod, hogy az akadály egy széles, barna, sziklaszerű tárgy.\n"</li>
+        <li>+ " Megérinted, és meglepve tapasztalod, hogy lágy, szivacsszerű.\n"</li>
+        <li>+ " Ha át szeretnél mászni rajta, lapozz a 373-ra. Ha ketté akarod vágni a kardoddal, lapozz a 215-re.\n");</li>
+        <li>System.out.println("Válasz:");</li>
+        <li>try {</li>
+        <li>valasz2 = System.in.read()-48;</li>
+        <li>System.out.print("A megadott oldal szám ");</li>
+        <li>System.out.println(valasz1);</li>
+        <li>}</li>
+        <li>catch (IOException e){</li>
+        <li>System.out.println("Nem jó oldal szám!");</li>
+        <li>}</li>
+        <li>if (valasz2 == 373){</li>
+        <li>oldal373 = 1;</li>
+        <li>}</li>
+        <li>if (valasz2 == 215){</li>
+        <li>oldal215 = 1;</li>
+        <li>}</li>
+        <li>}</li>
+        <li>if (oldal66 == 1){</li>
+        <li>oldal66=0;</li>
+        <li>System.out.printf("66. oldal\n" +</li>
+        <li>"Néhány perc gyaloglás után egy elágazáshoz érsz az alagútban. Egy, a falra festett fehér nyíl nyugatfelé mutat. \n"</li>
+        <li>+ "A földön nedves lábnyomok jelzik, merre haladtak az előtted járók. Nehéz biztosan megmondani, de úgy tűnik, hogy három közülük a nyíl irányába halad, míg egyikük úgy döntött, hogy keletnek megy. \n"</li>
+        <li>+ "Ha nyugat felé kívánsz menni, lapozz a 293-ra. Ha keletnek, lapozz a 56-re. \n");</li>
+        <li>System.out.println("Válasz: ");</li>
+        <li>try {</li>
+        <li>valasz3 = System.in.read()-48;</li>
+        <li>System.out.print("A megadott oldal szám ");</li>
+        <li>System.out.println(valasz1);</li>
+        <li>}</li>
+        <li>catch (IOException e){</li>
+        <li>System.out.println("Nem jó oldal szám!");</li>
+        <li>}</li>
+        <li>if (valasz3 == 293){</li>
+        <li>oldal293 = 1;</li>
+        <li>}</li>
+        <li>if (valasz3 == 56){</li>
+        <li>oldal56 = 1;</li>
+        <li>}</li>
+        <li>}</li>
+        <li>if (oldal137 == 1){</li>
+        <li>oldal137=0;</li>
+        <li>System.out.printf("137. oldal\n" +</li>
+        <li>"Ahogy végigmész az alagúton, csodálkozva látod, hogy egy jókora vasharang csüng alá a boltozatról. \n");</li>
+        <li>System.out.println("Tovább mész!");</li>
+        <li>oldal215=1;</li>
+        <li>}</li>
+        <li>if (oldal215 == 1){</li>
+        <li>oldal215=0;</li>
+        <li>System.out.printf("215. oldal\n" +</li>
+        <li>"Kardod könnyedén áthatol a spóragolyó vékonykülső burkán. \n"</li>
+        <li>+ "Sűrű barna spórafelhő csap ki a golyóból, és körülvesz. \n"</li>
+        <li>+ "Némelyik spóra a bőrödhöz tapad, és rettenetes viszketést okoz. \n"</li>
+        <li>+ "Nagy daganatok nőnek az arcodon és karodon, és a bőröd mintha égne. \n"</li>
+        <li>+ "2 ÉLETERŐ pontot veszítesz. Vadul vakarózva átléped a leeresztett golyót, és keletnek veszed az utad \n");</li>
+        <li>eletero= -2;</li>
+        <li>System.out.printf("Életerőd: %d\n", eletero);</li>
+        <li>System.out.println("Tovább mész!");</li>
+        <li>oldal270=1;</li>
+        <li>}</li>
+        <li>if (oldal270 == 1){</li>
+        <li>oldal270=0;</li>
+        <li>System.out.printf("270. oldal\n" +</li>
+        <li>"A doboz teteje könnyedén nyílik. Benne két aranypénzt találsz, és egy üzenetet, amely egy kis pergamenen neked szól.\n"</li>
+        <li>+ " Előbb zsebre vágod az aranyakat, aztán elolvasod az üzenetet: - „Jól tetted. \n"</li>
+        <li>+ "Legalább volt annyi eszed, hogy megállj és elfogadd az ajándékot. \n"</li>
+        <li>+ "Most azt tanácsolom neked, hogy keress és használj különféle tárgyakat, ha sikerrel akarsz áthaladni Halállabirintusomon.” \n"</li>
+        <li>+ "Azaláírás Szukumvit. Megjegyzed a tanácsot, apródarabokra téped a pergament, és tovább mész észak felé.\n"</li>
+        <li>+ " Lapozz a 66-ra. \n");</li>
+        <li>oldal66=1;</li>
+        <li>}</li>
+        <li>if (oldal293 == 1){</li>
+        <li>oldal293=0;</li>
+        <li>System.out.printf("293. oldal \n"</li>
+        <li>+ "A három pár nedves lábnyomot követve az alagútnyugati elágazásában hamarosan egy újabb el-ágazáshoz érsz. \n"</li>
+        <li>+ "Ha továbbmész nyugat felé a lábnyomokat követve, lapozz a 137-re.\n"</li>
+        <li>+ " Ha inkább észak felé mész a harmadik pár lábnyom után, lapozz a 387-re. \n");</li>
+        <li>System.out.println("Válasz: ");</li>
+        <li>try {</li>
+        <li>valasz4 = System.in.read()-48;</li>
+        <li>System.out.print("A megadott oldal szám ");</li>
+        <li>System.out.println(valasz4);</li>
+        <li>}</li>
+        <li>catch (IOException e){</li>
+        <li>System.out.println("Nem jó oldal szám!");</li>
+        <li>}</li>
+        <li>if (valasz4 == 137){</li>
+        <li>oldal137 = 1;</li>
+        <li>}</li>
+        <li>if (valasz4 == 387){</li>
+        <li>oldal387 = 1;</li>
+        <li>}</li>
+        <li>}</li>
+        <li>if (oldal373 == 1){</li>
+        <li>oldal373=0;</li>
+        <li>System.out.printf("373. oldal\n" +</li>
+        <li>"Fölmászol a lágy sziklára, attól tartasz, hogy bár-melyik pillanatban elnyelhet.\n"</li>
+        <li>+ " Nehéz átvergődni rajta, mert puha anyagában alig tudod a lábadat emelni, de végül átvergődsz rajta.\n"</li>
+        <li>+ " Megkönnyebbülten érsz újra szilárd talajra, és fordulsz kelet felé. \n");</li>
+        <li>}</li>
+        <li>if (oldal373 == 1){</li>
+        <li>oldal373=0;</li>
+        <li>System.out.printf("387. oldal\n" +</li>
+        <li>"Hallod, hogy elölről súlyos lépések közelednek. \n"</li>
+        <li>+ "Egy széles, állatbőrökbe öltözött, kőbaltás, primitívlény lép elő. \n"</li>
+        <li>+ "Ahogy meglát, morog, a földre köp, majd a kőbaltát felemelve közeledik, és mindennek kinéz, csak barátságosnak nem. \n"</li>
+        <li>+ "Előhúzod kardodat, és felkészülsz, hogy megküzdj a Barlangi Emberrel.\n "</li>
+        <li>+ "\n" +</li>
+        <li>"Barlangi Ember ÜGYESSÉG 7 ÉLETERŐ 7");</li>
+        <li>System.out.println(" ");</li>
+        <li>System.out.printf("Kalandlap\n");</li>
+        <li>System.out.printf("Ügyesség: %d\n", ugyesseg);</li>
+        <li>System.out.printf("Életerő: %d\n", eletero);</li>
+        <li>System.out.printf("Szerencse: %d\n", szerencse);</li>
+        <li>System.out.println(" ");</li>
+        <li>System.out.println("Vége!");</li>
+        <li>menet=0;</li>
+        <li>}</li>
+        <li>}</li>
+        <li>}</li>
+        <li>}</li>
+    </div>
+    </ul>
+</body>
+</html>
